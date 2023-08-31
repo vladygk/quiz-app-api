@@ -7,8 +7,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">Build with NestJS, Prisma ORM and Postgres.</p>
-
+  <p align="center">Built with NestJS, Prisma ORM and Postgres.</p>
 
 ## Description
 
