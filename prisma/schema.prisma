@@ -16,6 +16,8 @@ model Question{
   
   text String
   answers Answer[]
+
+  @@map("questions")
 }
 
 model Answer{
@@ -25,15 +27,19 @@ model Answer{
   text String
   questionId Int
   question Question @relation(fields: [questionId],references: [id])
+
+  @@map("answers")
 }
 
 model User{
   id Int @id @default(autoincrement())
   createdAt DateTime @default(now())
   
-  emial String @unique
+  email String @unique
   hash String
 
   firstName String?
   lastName String?
+
+  @@map("users")
 }
