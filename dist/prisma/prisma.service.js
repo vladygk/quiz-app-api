@@ -24,6 +24,13 @@ let PrismaService = class PrismaService extends client_1.PrismaClient {
         });
         this.config = config;
     }
+    cleantDb() {
+        return this.$transaction([
+            this.user.deleteMany(),
+            this.answer.deleteMany(),
+            this.question.deleteMany(),
+        ]);
+    }
 };
 exports.PrismaService = PrismaService;
 exports.PrismaService = PrismaService = __decorate([

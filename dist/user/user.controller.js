@@ -14,7 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
-const decorator_1 = require("../auth/decorator");
+const decorator_1 = require("../auth/decorator/");
 const guard_1 = require("../auth/guard");
 let UserController = class UserController {
     getMe(user) {

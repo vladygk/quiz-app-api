@@ -24,4 +24,4 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UserDto.prototype, "password", void 0);
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=user.dto.js.map

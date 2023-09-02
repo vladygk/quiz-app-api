@@ -9,19 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserDto = void 0;
+exports.AnswerDto = void 0;
 const class_validator_1 = require("class-validator");
-class UserDto {
+class AnswerDto {
 }
-exports.UserDto = UserDto;
+exports.AnswerDto = AnswerDto;
 __decorate([
-    (0, class_validator_1.IsEmail)(),
-    (0, class_validator_1.IsNotEmpty)(),
-    __metadata("design:type", String)
-], UserDto.prototype, "email", void 0);
-__decorate([
-    (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
-], UserDto.prototype, "password", void 0);
-//# sourceMappingURL=user.js.map
+], AnswerDto.prototype, "text", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", Number)
+], AnswerDto.prototype, "questionId", void 0);
+__decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", Boolean)
+], AnswerDto.prototype, "isCorrect", void 0);
+//# sourceMappingURL=answer.dto.js.map
