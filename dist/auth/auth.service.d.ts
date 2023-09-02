@@ -8,7 +8,7 @@ export declare class AuthService {
     private jwt;
     private config;
     constructor(prisma: PrismaService, jwt: JwtService, config: ConfigService);
-    signup(dto: UserDto): Promise<string | object>;
-    signin(dto: UserDto): Promise<string | object>;
+    signup(dto: UserDto): Promise<JwtInterface>;
+    signin(dto: UserDto): Promise<JwtInterface>;
     signJwtToken(userId: number, email: string): Promise<JwtInterface>;
 }

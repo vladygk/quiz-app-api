@@ -6,11 +6,11 @@ export declare class QuestionService {
     private prisma;
     private answerService;
     constructor(prisma: PrismaService, answerService: AnswerService);
-    createQuestion(dto: QuestionDto): Promise<{
+    createQuestion(dto: QuestionDto): Promise<BadRequestException | {
         id: number;
         createdAt: Date;
         text: string;
-    } | BadRequestException>;
+    }>;
     getAllQuestions(): Promise<QuestionDto[]>;
     getOneQuestion(id: string): Promise<QuestionExportDto>;
 }

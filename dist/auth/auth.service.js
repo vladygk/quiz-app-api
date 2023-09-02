@@ -33,7 +33,7 @@ let AuthService = class AuthService {
         catch (error) {
             if (error instanceof client_1.Prisma.PrismaClientKnownRequestError) {
                 if (error.code === 'P2002') {
-                    return new common_1.ForbiddenException('Email already in use').getResponse();
+                    throw new common_1.BadRequestException('Email already in use').getResponse();
                 }
             }
             throw error;
@@ -44,11 +44,11 @@ let AuthService = class AuthService {
             where: { email: dto.email },
         });
         if (!user) {
-            return new common_1.ForbiddenException('Incorrect credentials');
+            throw new common_1.BadRequestException('Incorrect credentials');
         }
         const isPasswordCorrect = await argon.verify(user.hash, dto.password);
         if (!isPasswordCorrect) {
-            return new common_1.ForbiddenException('Incorrect credentials').getResponse();
+            throw new common_1.BadRequestException('Incorrect credentials').getResponse();
         }
         return this.signJwtToken(user.id, user.email);
     }

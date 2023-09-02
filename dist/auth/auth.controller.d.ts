@@ -3,6 +3,6 @@ import { UserDto } from './dto';
 export declare class AuthController {
     private authService;
     constructor(authService: AuthService);
-    signup(dto: UserDto): Promise<string | object>;
-    signin(dto: UserDto): Promise<string | object>;
+    signup(dto: UserDto): Promise<import("./contract").JwtInterface>;
+    signin(dto: UserDto): Promise<import("./contract").JwtInterface>;
 }
