@@ -13,6 +13,7 @@ const auth_module_1 = require("./auth/auth.module");
 const question_module_1 = require("./question/question.module");
 const prisma_module_1 = require("./prisma/prisma.module");
 const answer_module_1 = require("./answer/answer.module");
+const user_module_1 = require("./user/user.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,6 +25,7 @@ exports.AppModule = AppModule = __decorate([
             prisma_module_1.PrismaModule,
             answer_module_1.AnswerModule,
             config_1.ConfigModule.forRoot({ isGlobal: true }),
+            user_module_1.UserModule,
         ],
     })
 ], AppModule);
