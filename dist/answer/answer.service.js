@@ -23,13 +23,13 @@ let AnswerService = class AnswerService {
                 data: {
                     text: dto.text,
                     questionId: dto.questionId,
-                    isCorrect: dto.isCorrect,
+                    points: dto.points,
                 },
             });
             return {
                 text: answer.text,
                 questionId: answer.questionId,
-                isCorrect: answer.isCorrect,
+                points: answer.points,
             };
         }
         catch (error) {
@@ -46,7 +46,7 @@ let AnswerService = class AnswerService {
         const answerDtos = answers.map((a) => ({
             text: a.text,
             questionId: a.questionId,
-            isCorrect: a.isCorrect,
+            points: a.points,
         }));
         return answerDtos;
     }

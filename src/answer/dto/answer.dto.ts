@@ -9,7 +9,7 @@ export class AnswerDto {
   @IsNotEmpty()
   questionId: number;
 
-  @IsBoolean()
+  @IsNumber()
   @IsNotEmpty()
-  isCorrect: boolean;
+  points: number;
 }

@@ -25,8 +25,8 @@ __decorate([
     __metadata("design:type", Number)
 ], AnswerDto.prototype, "questionId", void 0);
 __decorate([
-    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsNotEmpty)(),
-    __metadata("design:type", Boolean)
-], AnswerDto.prototype, "isCorrect", void 0);
+    __metadata("design:type", Number)
+], AnswerDto.prototype, "points", void 0);
 //# sourceMappingURL=answer.dto.js.map
